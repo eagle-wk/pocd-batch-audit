@@ -1,22 +1,42 @@
 # Getting a DOI: step by step
 
 Target: a citable, permanent DOI for the audit code and results, with GitHub as
-the working copy and Zenodo as the archive. Roughly 30 minutes of actual work,
+the working copy and Zenodo as the archive. Roughly 20 minutes of actual work,
 most of it waiting.
 
-> **Two routes to the same kind of DOI.**
+> **⚠️ This project already has a reserved DOI.**
 >
-> *This guide* uses Zenodo's GitHub integration: connect the repository once,
-> then every tagged release is archived automatically. Zenodo also mirrors the
-> code to Software Heritage, so the snapshot stays readable even if GitHub
-> disappears.
+> **`10.5281/zenodo.22899702`** was reserved on Zenodo before packaging, and it is
+> already written into the manuscript's availability statement, `README.md`,
+> `CITATION.cff` and `.zenodo.json`.
 >
-> If you would rather not deal with git at all, run
-> `python build_zenodo_upload.py` (from `pocd_data/`) and it produces a folder
-> with a ready-to-upload ZIP. Follow
-> `pocd_data/zenodo_upload/_先读我_如何上传.md`. The two routes are independent
-> — you can upload by hand now and turn the integration on later, but do **not**
-> archive the same version twice or you will end up with two DOIs for one thing.
+> **So the route is fixed: manual upload.** Send
+> `pocd_data/zenodo_upload/pocd-batch-audit-1.0.0.zip` (+ `README.md`) to that
+> reserved record and publish it. `build_zenodo_upload.py` produces exactly those
+> files, and `pocd_data/zenodo_upload/_先读我_如何上传.md` walks through the upload.
+>
+> **Do NOT switch on Zenodo's GitHub integration.**
+>
+> Zenodo's integration archives **each new GitHub release as a brand-new record
+> with a brand-new DOI**. There is no option to attach a release to a DOI that was
+> already reserved. Turning it on would give you:
+>
+> ```
+> 10.5281/zenodo.22899702   <- reserved, stays empty forever
+> 10.5281/zenodo.<other>    <- the integration's record, the one with the files
+> ```
+>
+> Two DOIs for one paper -- and the manuscript cites the empty one. Untangling
+> that afterwards means editing the manuscript, the cover letter and the record
+> relations, and a published DOI cannot be recycled.
+>
+> The rest of this file documents the manual route. Where it describes the git
+> side (steps 1-3, 5), that is about getting the repository published so reviewers
+> can browse it -- **not** about how the archive gets its DOI.
+
+If you have *not* reserved a DOI yet, the integration is a reasonable choice: see
+Zenodo's own documentation. But do not mix the two routes on one version -- that
+is how projects end up with two DOIs for the same thing.
 
 **What is and is not reversible** (Zenodo policy, checked 2026-09):
 
@@ -58,10 +78,11 @@ All four must pass. If the last one produces figures that differ byte-wise from
 `figures/output/`, stop and find out why before archiving — a DOI pointing at
 figures that cannot be reproduced is worse than no DOI.
 
-> Keep a file named `.zenodo.json` only if you want Zenodo to read metadata from
-> it. It is read **only** for the release that triggers archiving. If you would
-> rather type the metadata into the Zenodo web form, delete the file and fill the
-> form by hand; nothing else depends on it.
+> `.zenodo.json` is shipped as the machine-readable statement of the intended
+> metadata, and `build_zenodo_upload.py` renders the paste-ready form checklist
+> from it. But on the manual route **Zenodo never reads the file itself** -- the
+> web form is authoritative. Keep it for reference and for the packager; nothing
+> breaks if the form and the file disagree, though they should not.
 
 ---
 
@@ -123,19 +144,31 @@ the manuscript is still under double-blind review, see "Blind review" below.
 
 ---
 
-## 4. Connect Zenodo to GitHub
+## 4. Publish the reserved record — manual upload, **not** the integration
 
-1. Sign in at [zenodo.org](https://zenodo.org) with GitHub (or link GitHub under
-   *Settings → Applications*).
-2. Go to **Settings → GitHub** and find the repository in the list.
-3. Flip its switch **on**.
+Open the reserved record on Zenodo (**Upload → My uploads**), or create it if the
+reservation is not there yet:
 
-That is the whole integration. From now on, **every GitHub release** in that
-repository is archived automatically and gets its own DOI.
+1. **Upload → New upload.** If the DOI is already reserved, the form shows
+   `DOI: 10.5281/zenodo.22899702` in a *reserve* state. Leave it alone;
+   publishing activates it.
+2. Drag in **two** files: `pocd-batch-audit-1.0.0.zip` and `README.md`.
+3. Fill the metadata from `pocd_data/zenodo_upload/Zenodo表单填写清单.md` — every
+   field has a paste-ready value. **Resource type is `Software`**, not Dataset.
+   Related works: `Is supplement to` / `Software` / `URL` /
+   `https://github.com/eagle-wk/pocd-batch-audit`.
+4. **Publish.** The DOI goes live.
 
-> Zenodo will not archive a repository that is already archived elsewhere, and it
-> will not archive one it cannot see. If the repository does not appear in the
-> list, it is either private or the GitHub app lacks access to it.
+> **Do not** also upload the ZIP's contents as loose files — Zenodo expands the ZIP
+> into a browsable directory tree on the record page, so uploading both duplicates
+> the whole tree.
+
+> **Do not** connect this repository under *Settings → GitHub*. See the warning at
+> the top of this file: the integration mints a separate DOI and orphans the
+> reserved one. That is the single most expensive mistake available here.
+
+> The checklist in the archive was rendered from `.zenodo.json`, but on manual
+> upload Zenodo **does not read** that file — the web form is authoritative.
 
 ---
 
@@ -152,43 +185,51 @@ git push origin v1.0.0
 Then on GitHub: **Releases → Draft a new release**, pick tag `v1.0.0`, title it
 `v1.0.0`, and publish. (Alternatively `gh release create v1.0.0 --notes "..."`.)
 
+> Tagging here is purely provenance: it records which commit the archived snapshot
+> corresponds to. It is safe **only because the Zenodo integration stays off** --
+> if it were ever switched on, every release would mint another DOI.
+
+
 ---
 
 ## 6. Collect the DOI
 
-Give Zenodo a minute. Under **Zenodo → Upload → My uploads** a new record
-appears (it may take a few minutes to show; the badge on the GitHub repo page
-appears faster).
+You already know it — it was reserved before packaging:
 
-The record shows two DOIs:
-
-- a **version DOI** — `10.5281/zenodo.XXXXXXX`, specific to v1.0.0
-- a **concept DOI** — `10.5281/zenodo.YYYYYYY`, always the newest version
-
-**Cite the concept DOI in the manuscript.** It keeps resolving after you publish
-v1.1. Use the version DOI only when you mean this exact snapshot.
-
-Back-fill it:
-
-```bash
-python ../setup_repo_identity.py --doi 10.5281/zenodo.YYYYYYY
-git add -A
-git commit -m "Add Zenodo DOI"
-git push
+```
+concept DOI   10.5281/zenodo.22899702      <- cite this; always the newest version
+version DOI   10.5281/zenodo.<n>           <- appears alongside, pins v1.0.0 exactly
 ```
 
-This rewrites `README.md`, `CITATION.cff` and `.zenodo.json`. Note that editing
-`.zenodo.json` after archiving does **not** retroactively change the record — on
-the GitHub-integration route the file is read at release time, so it only affects
-the next release. To correct a record's metadata, use the **Edit** button on the
-record itself; the DOI does not change.
+**Cite the concept DOI in the manuscript.** It keeps resolving after you publish
+v1.1. Use the version DOI only when you mean this exact snapshot. Both are listed
+in the record's **Versions** section — picking the wrong one is the most common
+mistake in the whole process.
+
+Because the DOI was reserved *before* packaging, the ZIP already carries it in
+`README.md`, `CITATION.cff` and `.zenodo.json`, and the manuscript was regenerated
+with it. There is nothing to back-fill.
+
+> If the reserved DOI ever has to change, rewrite it in **one** place and re-run
+> the packagers:
+>
+> ```bash
+> python ../setup_repo_identity.py --doi 10.5281/zenodo.<new>
+> python ../make_v05.py              # regenerates both manuscript drafts
+> python ../build_zenodo_upload.py   # rebuilds the ZIP
+> ```
+>
+> Editing `.zenodo.json` alone does nothing to an already-published record: on
+> manual upload Zenodo never read that file. To correct **metadata** on a live
+> record, use the **Edit** button on the record — the DOI does not change.
 
 ---
 
 ## 7. Back-fill the manuscript
 
-The manuscript's Data and code availability statement must point at the
-repository and the DOI. Update it through the generator, not by hand:
+The availability statement already names both the repository and the DOI
+(`10.5281/zenodo.22899702`), because the DOI was reserved *before* packaging. If
+either changes, update it through the generator, not by hand:
 
 ```
 pocd_data/make_v05.py        # the single source of truth for the drafts
@@ -200,18 +241,40 @@ Re-run it so both the English and Chinese drafts are regenerated, then confirm:
 MANUSCRIPT_DIR=../.. python checks/verify_figures.py
 ```
 
-The DOI in the statement should be the **concept DOI**.
+The DOI in the statement must be the **concept DOI**, and the repository URL must
+match the repository exactly as it exists on GitHub. A renamed repository, or one
+that was never pushed, leaves a 404 inside a file that freezes 30 days after
+publication.
+
+> The manuscript is generated, so the availability text lives in `make_v05.py`.
+> Editing the HTML directly works until the next re-run, then silently reverts.
 
 ---
 
 ## 8. Verify it resolves
 
 ```bash
-curl -sI https://doi.org/10.5281/zenodo.YYYYYYY | head -3   # expect 302
+curl -sI https://doi.org/10.5281/zenodo.22899702 | head -3   # expect 302
 ```
 
-Also open the Zenodo record once and confirm: licence reads MIT, creators are the
-real authors, and the description is not the placeholder text.
+Also open the Zenodo record once and confirm:
+
+- licence reads **MIT**; creators are the **six** real authors in manuscript order,
+  with Song Keqin marked as contact; the description is the real one, not a template;
+- the file list shows the ZIP with its directory tree expanded;
+- Related works carries `Is supplement to` / `Software` pointing at
+  `https://github.com/eagle-wk/pocd-batch-audit`.
+
+Then confirm that repository link actually opens. The packager probes it for you:
+
+```bash
+cd ../.. && python build_zenodo_upload.py --check-links-only    # want: ✔ 可达
+```
+
+> If the probe reports `? 网络不可达，未能判定`, that is **not** a failure: it means
+> the machine could not reach GitHub. This is common behind a proxy the browser
+> uses but the shell does not -- `curl` returns `000` (a timeout code) rather than
+> a 404. Open the URL by hand in that case.
 
 ---
 
@@ -226,8 +289,8 @@ publish the DOI in the manuscript yet. Two options:
 - Keep the repository private and state *"code will be released upon
   acceptance"* — weaker, and some journals now reject it.
 
-Either way, prepare the repository now so that acceptance only requires flipping
-a switch.
+Either way, prepare the repository now so that acceptance only requires publishing
+the record that is already reserved.
 
 ---
 
@@ -235,20 +298,28 @@ a switch.
 
 | Symptom | Cause |
 |---|---|
-| DOI metadata shows `AUTHOR_FAMILY_NAME` | Step 1 was skipped, or `.zenodo.json` was edited after tagging |
-| No Zenodo record appears | The repo switch in *Settings → GitHub* is off, or the release is a draft |
+| **The record carries a DOI you never reserved** | The Zenodo GitHub integration was switched on. It creates its own record and leaves the reserved DOI permanently empty — the most expensive mistake available here |
+| DOI metadata shows `AUTHOR_FAMILY_NAME` | The identity step was skipped, or the packet was built before it was filled |
+| A code link in the record or the manuscript 404s | The repository was never pushed, or was renamed / made private / deleted after the archive froze |
 | `git push` rejected for large files | Raw GEO data got staged; fix `.gitignore` and rewrite history before pushing |
 | DOI resolves to an old version | The version DOI was cited instead of the concept DOI |
-| Figures differ on a fresh clone | A dependency not pinned, or a path still pointing at a local directory |
-| Zenodo created a new record instead of a version | `CITATION.cff` / `.zenodo.json` version strings disagree with the tag |
+| Figures differ from a fresh checkout | A dependency not pinned, or a path still pointing at a local directory |
+| Only part of the tree appears on the record | The ZIP was built from the wrong root; the archive must contain exactly one top-level directory |
+| The ZIP differs byte-wise from `MANIFEST_sha256.txt` | Line endings drifted — a Windows `open(p, "w")` writes CRLF. Rebuild; do not hand-upload |
+| The manuscript points at a dead repo | The repository was renamed. Four files plus `make_v05.py` must change together, then re-package |
 
 ---
 
 ## After acceptance
 
-1. Fill in `journal` and `doi` in the `preferred-citation` block of
+1. Fill in `journal` and the article `doi` in the `preferred-citation` block of
    `CITATION.cff`.
-2. Tag `v1.0.1` if anything in the code changed during revision, so the archived
-   version matches what the paper describes.
-3. Put the concept DOI in the manuscript's availability statement and in the
+2. Add the article DOI to the Zenodo record's **Related works** as
+   `isSupplementTo`. Metadata can be edited after publication and the DOI does not
+   change, so this needs no new version. It is the only related identifier the
+   record should carry beyond the code repository.
+3. Bump to `v1.0.1` and re-run `build_zenodo_upload.py` if the code changed during
+   revision, so the archived version matches what the paper describes. On the
+   published record use **New version**; the concept DOI stays the same.
+4. Put the concept DOI in the manuscript's availability statement **and** in the
    journal's submission form — they are two separate places.
