@@ -5,8 +5,8 @@ abstract: >-
   Reference implementation of a four-stage design-admissibility audit for public
   transcriptomic datasets, with the derived results and figures for a
   methodological audit of 14 contrast-units across 12 GEO series in
-  perioperative neurocognitive disorder and neurotrauma. The audit applies four
-  defences in order (label verifiability; a three-gate batch test combining
+  perioperative neurocognitive disorder and traumatic brain injury. The audit
+  applies four defences in order (label verifiability; a three-gate batch test combining
   structural entanglement, technical separability and nesting; global-shift
   diagnosis; external gene-set validation) and returns one of four verdicts --
   stop, correct, proceed or normalize -- per contrast-unit.
@@ -25,7 +25,7 @@ keywords:
   - transcriptomics
   - methodological audit
   - perioperative neurocognitive disorder
-  - neurotrauma
+  - traumatic brain injury
 # >>> AUTHORS (managed by setup_repo_identity.py --creators) >>>
 authors:
   - family-names: "Wang"

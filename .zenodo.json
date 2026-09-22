@@ -57,7 +57,7 @@
     "methodological audit",
     "design admissibility",
     "postoperative cognitive dysfunction",
-    "neurotrauma"
+    "traumatic brain injury"
   ],
   "notes": "Accompanies the manuscript \"A diagnostic audit for batch and confounding artifacts in reuse of public bulk transcriptomic data: a two-domain study in perioperative neurocognitive disorder and traumatic brain injury\" (under review; this record is the code and results archival release, not the article). Creators and affiliation follow the manuscript's author list. The version-controlled source of this release is https://github.com/eagle-wk/pocd-batch-audit ; this record is the citable, frozen snapshot of it. On the GitHub-integration route Zenodo reads its metadata from this file at release time; on the manual route the web form is authoritative and this file is shipped for reference only. The archive DOI is 10.5281/zenodo.22899702."
 }
