@@ -1,0 +1,117 @@
+﻿# 小鼠 I 型干扰素 / MHC-I 抗原提呈 / 补体-小胶质 基因集(文献驱动, 不依赖本研究数据)
+#
+# 为什么要单独建这一套:
+#   GSE330865 的 royalblue 模块虽然生物学身份清楚(干扰素/MHC-I),但它本身就是
+#   从该数据集里挖出来的 —— 再用它去检验同一数据集,属于循环论证。
+#   用一套**预先定义、来自教科书与共识文献**的集合,在两个数据集上分别检验,
+#   才能构成真正独立的方向性验证。
+#
+# 分类:
+#   ISG_core         I 型干扰素刺激基因(interferon-stimulated genes)
+#   MHC_I_AP         MHC-I 抗原加工与提呈
+#   IFN_signaling    干扰素受体 / JAK-STAT / IRF 通路
+#   Complement_MG    补体 + 小胶质/髓系激活标记
+#   ISG_effector     干扰素诱导的直接抗病毒效应分子
+gene	set
+Isg15	ISG_core
+Ifit1	ISG_core
+Ifit2	ISG_core
+Ifit3	ISG_core
+Ifit3b	ISG_core
+Oas1a	ISG_core
+Oas1g	ISG_core
+Oas2	ISG_core
+Oas3	ISG_core
+Oasl1	ISG_core
+Oasl2	ISG_core
+Rsad2	ISG_core
+Bst2	ISG_core
+Usp18	ISG_core
+Isg20	ISG_core
+Samd9l	ISG_core
+Ifi204	ISG_core
+Ifi203	ISG_core
+Ifi202b	ISG_core
+Zbp1	ISG_core
+Cxcl10	ISG_core
+Pml	ISG_core
+Sp110	ISG_core
+Parp9	ISG_core
+Parp14	ISG_core
+Dtx3l	ISG_core
+Trim21	ISG_core
+Herc6	ISG_core
+Gbp2	ISG_core
+Gbp3	ISG_core
+Gbp5	ISG_core
+Gbp7	ISG_core
+Nt5c3a	ISG_core
+Mx1	ISG_effector
+Mx2	ISG_effector
+Zc3hav1	ISG_effector
+Eif2ak2	ISG_effector
+Pkr	ISG_effector
+Adar	ISG_effector
+Ddx58	ISG_effector
+Ifih1	ISG_effector
+Tmem173	ISG_effector
+Cgas	ISG_effector
+Sting1	ISG_effector
+H2-K1	MHC_I_AP
+H2-D1	MHC_I_AP
+H2-Q7	MHC_I_AP
+H2-M3	MHC_I_AP
+H2-T23	MHC_I_AP
+B2m	MHC_I_AP
+Tap1	MHC_I_AP
+Tap2	MHC_I_AP
+Tapbp	MHC_I_AP
+Psmb8	MHC_I_AP
+Psmb9	MHC_I_AP
+Psmb10	MHC_I_AP
+Psmb3	MHC_I_AP
+Psmb4	MHC_I_AP
+Nlrc5	MHC_I_AP
+Mr1	MHC_I_AP
+Erap1	MHC_I_AP
+Pdia3	MHC_I_AP
+Cd74	MHC_I_AP
+Ifnar1	IFN_signaling
+Ifnar2	IFN_signaling
+Jak1	IFN_signaling
+Jak2	IFN_signaling
+Tyk2	IFN_signaling
+Stat1	IFN_signaling
+Stat2	IFN_signaling
+Irf1	IFN_signaling
+Irf3	IFN_signaling
+Irf5	IFN_signaling
+Irf7	IFN_signaling
+Irf9	IFN_signaling
+Ifnb1	IFN_signaling
+C1qa	Complement_MG
+C1qb	Complement_MG
+C1qc	Complement_MG
+C3	Complement_MG
+C4b	Complement_MG
+Cfi	Complement_MG
+Serping1	Complement_MG
+Mpeg1	Complement_MG
+Irgm1	Complement_MG
+Tyrobp	Complement_MG
+Trem2	Complement_MG
+Cx3cr1	Complement_MG
+Aif1	Complement_MG
+Itgam	Complement_MG
+Cd68	Complement_MG
+P2ry12	Complement_MG
+Tlr1	Complement_MG
+Tlr2	Complement_MG
+Clec5a	Complement_MG
+Lacc1	Complement_MG
+Pirb	Complement_MG
+Ly9	Complement_MG
+Trat1	Complement_MG
+Hexb	Complement_MG
+Cst7	Complement_MG
+Ctsd	Complement_MG

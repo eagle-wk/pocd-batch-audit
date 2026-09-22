@@ -1,0 +1,113 @@
+{
+  "dataset": "GSE330865_hippocampus_counts.tsv",
+  "n_samples": 30,
+  "n_genes": 56884,
+  "batch_source": "实测",
+  "libsize_bimodal": false,
+  "libsize_threshold": 10457862.5,
+  "libsize_means": {
+    "low": 8097351.230769231,
+    "high": 10991690.25
+  },
+  "n_high_batch": 4,
+  "confounded_groups": [
+    "17m_sham",
+    "17m_surgery",
+    "27m_sham",
+    "27m_surgery",
+    "3m_sham",
+    "3m_surgery"
+  ],
+  "n_confounded_groups": 6,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.2574125452366565,
+    "R2_batch": 0.25642788985215714,
+    "R2_group": 0.25642788985215703
+  },
+  "gene_level_batch_dominant": 1258,
+  "gene_level_group_dominant": 1291,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.2,
+    "random_baseline": 0.16666666666666666,
+    "batch_supported_by_technical": false
+  },
+  "strata": {
+    "17m": {
+      "n": 10,
+      "n_groups": 2,
+      "n_batches": 2,
+      "table": {
+        "17m_sham": {
+          "B1": 0,
+          "B2": 5
+        },
+        "17m_surgery": {
+          "B1": 5,
+          "B2": 0
+        }
+      },
+      "n_confounded_groups": 2,
+      "loocv_accuracy": 0.3,
+      "random_baseline": 0.5,
+      "loocv_perm_p": 0.77,
+      "batch_technically_separable": false,
+      "usable_within": true
+    },
+    "27m": {
+      "n": 10,
+      "n_groups": 2,
+      "n_batches": 2,
+      "table": {
+        "27m_sham": {
+          "B3": 0,
+          "B4": 5
+        },
+        "27m_surgery": {
+          "B3": 5,
+          "B4": 0
+        }
+      },
+      "n_confounded_groups": 2,
+      "loocv_accuracy": 0.7,
+      "random_baseline": 0.5,
+      "loocv_perm_p": 0.25,
+      "batch_technically_separable": false,
+      "usable_within": true
+    },
+    "3m": {
+      "n": 10,
+      "n_groups": 2,
+      "n_batches": 2,
+      "table": {
+        "3m_sham": {
+          "B5": 0,
+          "B6": 5
+        },
+        "3m_surgery": {
+          "B5": 5,
+          "B6": 0
+        }
+      },
+      "n_confounded_groups": 2,
+      "loocv_accuracy": 0.7,
+      "random_baseline": 0.5,
+      "loocv_perm_p": 0.305,
+      "batch_technically_separable": false,
+      "usable_within": true
+    }
+  },
+  "median_uniq_batch": 0.0,
+  "median_uniq_group": 0.0,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": true,
+  "recommendation": "可用,但批次身份待确认:分组与批次标签完全重叠属编号构造,且这些标签在技术指标上不可区分 → 无证据表明存在真实批次效应。建议先用 lib.size + detected genes 作协变量的敏感性分析,并向作者/补充材料核实建库批次记录",
+  "FAIL": [],
+  "WARN": [
+    "B*: 分组与\"批次\"标签看似 100% 混杂,但这些标签在技术指标上不可区分(留一准确率 0.20 vs 基线 0.17)→ 更可能是提交者的编号习惯而非真实建库批次,该混杂警报存疑",
+    "B?: 6 个分组与批次标签完全重叠,但批次标签技术不可区分,暂不计为红线(需人工确认建库记录)"
+  ],
+  "usable": true
+}

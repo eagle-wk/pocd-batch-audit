@@ -1,0 +1,72 @@
+{
+  "dataset": "GSE304956_counts.csv.gz",
+  "n_samples": 29,
+  "n_genes": 55416,
+  "batch_source": "实测",
+  "libsize_bimodal": true,
+  "libsize_threshold": 13724257.0,
+  "libsize_means": {
+    "low": 6953508.5,
+    "high": 35263667.64
+  },
+  "n_high_batch": 25,
+  "confounded_groups": [],
+  "n_confounded_groups": 0,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.25196370633478365,
+    "R2_batch": 0.017822633741692684,
+    "R2_group": 0.031338428073278246
+  },
+  "gene_level_batch_dominant": 2587,
+  "gene_level_group_dominant": 2413,
+  "within_group_batch_effects": [
+    {
+      "group": "burn",
+      "n_low": 5,
+      "n_high": 5,
+      "within_batch_diff": 0.06498421439377244
+    },
+    {
+      "group": "excision",
+      "n_low": 5,
+      "n_high": 5,
+      "within_batch_diff": -0.015637918594169076
+    },
+    {
+      "group": "sham",
+      "n_low": 4,
+      "n_high": 5,
+      "within_batch_diff": 0.11918824810673279
+    }
+  ],
+  "median_uniq_batch": 0.05857890722704584,
+  "median_uniq_group": 0.05297186538956594,
+  "cross_batch_replication": {
+    "burn_vs_excision": {
+      "n_genes": 5000,
+      "pearson_r": -0.2860826757230989,
+      "sign_agreement": 0.3146,
+      "n_batches": 2
+    },
+    "burn_vs_sham": {
+      "n_genes": 5000,
+      "pearson_r": -0.2855401979971162,
+      "sign_agreement": 0.3958,
+      "n_batches": 2
+    },
+    "excision_vs_sham": {
+      "n_genes": 5000,
+      "pearson_r": -0.2126898974390661,
+      "sign_agreement": 0.444,
+      "n_batches": 2
+    }
+  },
+  "batch_separable_from_group": true,
+  "recommendation": "不可用:见 FAIL 列表",
+  "FAIL": [
+    "E: 跨批次复现性失败(3 组对比的批次间效应相关 r<0.3 或方向一致率<70%)"
+  ],
+  "WARN": [],
+  "usable": false
+}

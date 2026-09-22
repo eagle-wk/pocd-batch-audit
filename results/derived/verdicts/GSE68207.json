@@ -1,0 +1,67 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 8,
+  "n_genes": 26031,
+  "batch_source": "推断(文库大小双峰)",
+  "libsize_bimodal": false,
+  "libsize_threshold": 2349826.4026825,
+  "libsize_means": {
+    "low": 1960854.9363022498,
+    "high": 2964264.087212
+  },
+  "n_high_batch": 4,
+  "confounded_groups": [],
+  "n_confounded_groups": 0,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.769695751662672,
+    "R2_batch": 0.8132851435187268,
+    "R2_group": 0.022081338905395098
+  },
+  "gene_level_batch_dominant": 4703,
+  "gene_level_group_dominant": 292,
+  "within_group_batch_effects": [
+    {
+      "group": "control",
+      "n_low": 2,
+      "n_high": 2,
+      "within_batch_diff": 0.5493293166599571
+    },
+    {
+      "group": "injured",
+      "n_low": 2,
+      "n_high": 2,
+      "within_batch_diff": 0.5699733581647468
+    }
+  ],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 1.0,
+    "random_baseline": 0.5,
+    "loocv_perm_p": 0.025,
+    "batch_supported_by_technical": true,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.7175362325980083,
+  "median_uniq_group": 0.025532719829520878,
+  "cross_batch_replication": {
+    "control_vs_injured": {
+      "n_genes": 5000,
+      "pearson_r": 0.08368264410201552,
+      "sign_agreement": 0.6266,
+      "n_batches": 2
+    }
+  },
+  "batch_separable_from_group": true,
+  "batch_block_degenerate": false,
+  "recommendation": "不可用:见 FAIL 列表",
+  "FAIL": [
+    "C: 4703/5000 个高变基因由批次主导,且批次独有方差中位数(0.718)为分组(0.026)的 2 倍以上",
+    "E: 跨批次复现性失败(1 组对比的批次间效应相关 r<0.3 或方向一致率<70%)"
+  ],
+  "WARN": [
+    "批次标签在技术指标上可区分(留一准确率 1.00 vs 基线 0.50, 置换 p=0.025)且未被任何分层变量嵌套解释→ 批次真实存在,混杂判定成立"
+  ],
+  "usable": false
+}

@@ -1,0 +1,4 @@
+group	batch1	batch2	total	confounded
+burn	5	5	10	no
+excision	5	5	10	no
+sham	4	5	9	no

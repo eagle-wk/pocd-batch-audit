@@ -1,0 +1,111 @@
+{
+  "tag": "GSE297195_aged24h",
+  "strata": [
+    "24h"
+  ],
+  "genome_median_dz_raw": -0.16057414599809372,
+  "genome_frac_negative_raw": 0.5428766867732107,
+  "genome_median_dz_qn": 0.02655539925905781,
+  "genome_frac_negative_qn": 0.49300416640756173,
+  "results": [
+    {
+      "set": "m6A_writer",
+      "n_genes": 9,
+      "mean_dz": -0.7763694538687725,
+      "emp_p": 0.0268,
+      "mean_expr": 5.060937606837608,
+      "median_expr_rank_pct": 63.37776119506111,
+      "qn_mean_dz": -0.6430684938201193,
+      "qn_emp_p": 0.0556,
+      "verdict": "[全局位移]"
+    },
+    {
+      "set": "ferroptosis_suppressor",
+      "n_genes": 19,
+      "mean_dz": -0.5364810850817529,
+      "emp_p": 0.0358,
+      "mean_expr": 5.524444534412955,
+      "median_expr_rank_pct": 67.3861601955888,
+      "qn_mean_dz": -0.5218571889317476,
+      "qn_emp_p": 0.0276,
+      "verdict": "[稳健-特异]"
+    },
+    {
+      "set": "PANoptosis_panoptosome_kinase",
+      "n_genes": 7,
+      "mean_dz": -0.7556172380068882,
+      "emp_p": 0.0596,
+      "mean_expr": 2.124168131868132,
+      "median_expr_rank_pct": 23.625041086641733,
+      "qn_mean_dz": -0.3611756910931033,
+      "qn_emp_p": 0.3724,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "pyroptosis_caspase_cytokine",
+      "n_genes": 6,
+      "mean_dz": -0.7163515699243378,
+      "emp_p": 0.0932,
+      "mean_expr": 2.7423961538461543,
+      "median_expr_rank_pct": 30.970296208776404,
+      "qn_mean_dz": -0.5168136376052511,
+      "qn_emp_p": 0.2284,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "m6A_reader",
+      "n_genes": 12,
+      "mean_dz": 0.4037066800577784,
+      "emp_p": 0.2056,
+      "mean_expr": 6.108504487179487,
+      "median_expr_rank_pct": 76.03797442115953,
+      "qn_mean_dz": 0.2736034965212431,
+      "qn_emp_p": 0.3654,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "PANoptosis_regulator_execution",
+      "n_genes": 11,
+      "mean_dz": -0.30445036131100517,
+      "emp_p": 0.3694,
+      "mean_expr": 3.6841363636363638,
+      "median_expr_rank_pct": 43.70996828555438,
+      "qn_mean_dz": -0.05857647599244003,
+      "qn_emp_p": 0.8438,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "m1A_m5C_optional_m5C",
+      "n_genes": 6,
+      "mean_dz": 0.10162438507878908,
+      "emp_p": 0.8094,
+      "mean_expr": 4.252316666666666,
+      "median_expr_rank_pct": 51.981634641295116,
+      "qn_mean_dz": 0.23921298010678727,
+      "qn_emp_p": 0.5842,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "PANoptosis_panoptosome_sensor",
+      "n_genes": 6,
+      "mean_dz": -0.08401189216266791,
+      "emp_p": 0.8628,
+      "mean_expr": 1.7135705128205128,
+      "median_expr_rank_pct": 18.569533403809878,
+      "qn_mean_dz": 0.01970773646218338,
+      "qn_emp_p": 0.9656,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "ferroptosis_driver",
+      "n_genes": 26,
+      "mean_dz": -0.012617187305578793,
+      "emp_p": 0.9578,
+      "mean_expr": 5.0016644970414195,
+      "median_expr_rank_pct": 61.71186254203479,
+      "qn_mean_dz": 0.07104273660779371,
+      "qn_emp_p": 0.7218,
+      "verdict": "[无信号]"
+    }
+  ]
+}

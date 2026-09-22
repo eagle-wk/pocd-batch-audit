@@ -1,0 +1,70 @@
+{
+  "reps": 100,
+  "perm": 200,
+  "n_per_group": 15,
+  "p_genes": 2000,
+  "our_overall_correct_rate": 0.992,
+  "rows": [
+    {
+      "scenario": "A_no_batch",
+      "truth": "proceed",
+      "truth_cn": "直接分析",
+      "our_correct_rate": 1.0,
+      "verdict_dist": {
+        "proceed": 100
+      },
+      "combat_retention": NaN,
+      "sva_retention": NaN,
+      "ruv_retention": NaN
+    },
+    {
+      "scenario": "B_batch_crossed",
+      "truth": "correct",
+      "truth_cn": "校正后分析",
+      "our_correct_rate": 1.0,
+      "verdict_dist": {
+        "correct": 100
+      },
+      "combat_retention": 1.1264953182007158,
+      "sva_retention": 0.999999999998989,
+      "ruv_retention": 0.9995082220435967
+    },
+    {
+      "scenario": "C_batch_confound",
+      "truth": "stop",
+      "truth_cn": "不可用",
+      "our_correct_rate": 1.0,
+      "verdict_dist": {
+        "stop": 100
+      },
+      "combat_retention": 1.7420207615501362e-16,
+      "sva_retention": 0.9999999999995459,
+      "ruv_retention": 0.01851824692879698
+    },
+    {
+      "scenario": "D_pseudo_batch",
+      "truth": "proceed",
+      "truth_cn": "直接分析",
+      "our_correct_rate": 0.96,
+      "verdict_dist": {
+        "proceed": 96,
+        "correct": 4
+      },
+      "combat_retention": 0.9789019784769674,
+      "sva_retention": 0.9999999999989976,
+      "ruv_retention": 0.9999383445081831
+    },
+    {
+      "scenario": "E_global_shift",
+      "truth": "normalize",
+      "truth_cn": "归一化后分析",
+      "our_correct_rate": 1.0,
+      "verdict_dist": {
+        "normalize": 100
+      },
+      "combat_retention": NaN,
+      "sva_retention": NaN,
+      "ruv_retention": NaN
+    }
+  ]
+}

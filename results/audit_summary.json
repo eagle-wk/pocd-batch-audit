@@ -1,0 +1,13 @@
+{
+  "n_datasets": 14,
+  "usable": 2,
+  "caveat": 6,
+  "unusable": 6,
+  "frac_usable": 0.14285714285714285,
+  "frac_caveat": 0.42857142857142855,
+  "frac_unusable": 0.42857142857142855,
+  "frac_not_clean": 0.8571428571428571,
+  "unverified_group_inference": [],
+  "n_unverified": 0,
+  "headline": "6/14 categorically unusable; 6/14 usable only under documented restrictions; 2/14 unconditionally analyzable"
+}

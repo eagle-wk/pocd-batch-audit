@@ -1,0 +1,68 @@
+{
+  "tag": "IFN_GSE297195_24h",
+  "strata": [
+    "Aged",
+    "Young"
+  ],
+  "genome_median_dz_raw": -0.19292628525677522,
+  "genome_frac_negative_raw": 0.5834214290156085,
+  "genome_median_dz_qn": 0.04626243635640176,
+  "genome_frac_negative_qn": 0.47957216591008023,
+  "results": [
+    {
+      "set": "IFN_signaling",
+      "n_genes": 12,
+      "mean_dz": -0.8604065713801795,
+      "emp_p": 0.0006,
+      "mean_expr": 3.947358695652174,
+      "median_expr_rank_pct": 47.162800820844474,
+      "qn_mean_dz": -0.6113386972722489,
+      "qn_emp_p": 0.0076,
+      "verdict": "[稳健-特异]"
+    },
+    {
+      "set": "ISG_core",
+      "n_genes": 24,
+      "mean_dz": -0.40988616871260214,
+      "emp_p": 0.0684,
+      "mean_expr": 2.007926992753623,
+      "median_expr_rank_pct": 21.53473042721224,
+      "qn_mean_dz": -0.17911031372911554,
+      "qn_emp_p": 0.2856,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "Complement_MG",
+      "n_genes": 20,
+      "mean_dz": -0.24466408223318675,
+      "emp_p": 0.3358,
+      "mean_expr": 3.9726543478260865,
+      "median_expr_rank_pct": 47.91524158945338,
+      "qn_mean_dz": -0.07235255113630254,
+      "qn_emp_p": 0.6952,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "MHC_I_AP",
+      "n_genes": 19,
+      "mean_dz": -0.16019267207118282,
+      "emp_p": 0.5438,
+      "mean_expr": 3.3222089244851256,
+      "median_expr_rank_pct": 39.27420067487293,
+      "qn_mean_dz": 0.06193338537296904,
+      "qn_emp_p": 0.7392,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "ISG_effector",
+      "n_genes": 6,
+      "mean_dz": -0.06616314379460456,
+      "emp_p": 0.8572,
+      "mean_expr": 3.307104347826087,
+      "median_expr_rank_pct": 38.32680388864705,
+      "qn_mean_dz": 0.18602691362173732,
+      "qn_emp_p": 0.5864,
+      "verdict": "[无信号]"
+    }
+  ]
+}

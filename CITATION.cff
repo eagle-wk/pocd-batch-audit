@@ -1,0 +1,86 @@
+cff-version: 1.2.0
+message: "If you use this audit framework, please cite the manuscript; if you use the code directly, cite this archived release."
+title: "Batch-confound audit for public transcriptomic datasets"
+abstract: >-
+  Reference implementation of a four-stage design-admissibility audit for public
+  transcriptomic datasets, with the derived results and figures for a
+  methodological audit of 14 contrast-units across 12 GEO series in
+  perioperative neurocognitive disorder and neurotrauma. The audit applies four
+  defences in order (label verifiability; a three-gate batch test combining
+  structural entanglement, technical separability and nesting; global-shift
+  diagnosis; external gene-set validation) and returns one of four verdicts --
+  stop, correct, proceed or normalize -- per contrast-unit.
+type: software
+version: 1.0.0
+date-released: "2026-09-22"
+license: MIT
+doi: "10.5281/zenodo.22899702"
+repository-code: "https://github.com/eagle-wk/pocd-batch-audit"
+url: "https://github.com/eagle-wk/pocd-batch-audit"
+keywords:
+  - batch effect
+  - confounding
+  - GEO
+  - reproducibility
+  - transcriptomics
+  - methodological audit
+  - perioperative neurocognitive disorder
+  - neurotrauma
+# >>> AUTHORS (managed by setup_repo_identity.py --creators) >>>
+authors:
+  - family-names: "Wang"
+    given-names: "Kun"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+  - family-names: "Liu"
+    given-names: "Bo"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+  - family-names: "Wang"
+    given-names: "Chunjie"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+  - family-names: "Hu"
+    given-names: "Jiayan"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+  - family-names: "Chen"
+    given-names: "Hao"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+  - family-names: "Song"
+    given-names: "Keqin"
+    affiliation: "Zhoushan Hospital, Zhejiang, China"
+# <<< AUTHORS <<<
+
+# Order matches the manuscript's author list. Corresponding author: Keqin Song
+# (recorded with role ContactPerson in .zenodo.json).
+preferred-citation:
+  type: article
+  # Title as it stands in manuscript v0.5. If the title changes during review,
+  # update it here too -- the point of preferred-citation is that it matches the
+  # paper a reader will actually find.
+  title: >-
+    A diagnostic audit for batch and confounding artifacts in reuse of public
+    bulk transcriptomic data: a two-domain study in perioperative
+    neurocognitive disorder and traumatic brain injury
+  year: 2026
+  # journal: ...        # add the journal name once the manuscript is accepted
+  # doi: ...            # and the article DOI, once it is assigned
+  # >>> PREFERRED-AUTHORS (managed by setup_repo_identity.py --creators) >>>
+  authors:
+    - family-names: "Wang"
+      given-names: "Kun"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+    - family-names: "Liu"
+      given-names: "Bo"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+    - family-names: "Wang"
+      given-names: "Chunjie"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+    - family-names: "Hu"
+      given-names: "Jiayan"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+    - family-names: "Chen"
+      given-names: "Hao"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+    - family-names: "Song"
+      given-names: "Keqin"
+      affiliation: "Zhoushan Hospital, Zhejiang, China"
+  # <<< PREFERRED-AUTHORS <<<
+

@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "organism": "human",
+  "date": "2026-09-02",
+  "description": "POCD/POD RNA修饰(m6A为主)与程序性细胞死亡(PCD)模式基因集,供 analysis_patterns.py 读取打分。来源:文献共识基因列表(m6A 参考 m6A-PND 综述;铁死亡参考 FerrDb v2 精选;焦亡/PANoptosis 参考 GSDM/炎症小体/PANoptosome 文献)。",
+  "modules": {
+    "m6A": {
+      "label": "m6A RNA methylation regulators",
+      "sub": {
+        "writer": ["METTL3", "METTL14", "WTAP", "VIRMA", "ZC3H13", "RBM15", "RBM15B", "CBLL1", "METTL16"],
+        "eraser": ["FTO", "ALKBH5"],
+        "reader": ["YTHDF1", "YTHDF2", "YTHDF3", "YTHDC1", "YTHDC2", "IGF2BP1", "IGF2BP2", "IGF2BP3", "HNRNPA2B1", "HNRNPC", "PRRC2A", "ELAVL1", "FMR1", "RBMX"]
+      },
+      "core": ["METTL3", "METTL14", "WTAP", "VIRMA", "ZC3H13", "RBM15", "RBM15B", "CBLL1", "METTL16", "FTO", "ALKBH5", "YTHDF1", "YTHDF2", "YTHDF3", "YTHDC1", "YTHDC2", "IGF2BP1", "IGF2BP2", "IGF2BP3", "HNRNPA2B1", "HNRNPC", "PRRC2A", "ELAVL1", "FMR1", "RBMX"]
+    },
+    "ferroptosis": {
+      "label": "Ferroptosis",
+      "sub": {
+        "driver": ["ACSL4", "LPCAT3", "ALOX15", "NCOA4", "TFRC", "SLC11A2", "STEAP3", "TF", "CP", "HFE", "GLS2", "SAT1", "ATG5", "ATG7", "MAP1LC3A", "MAP1LC3B", "CS", "FDFT1", "MBOAT1", "HILPDA", "PEBP1", "IREB2", "ACO1", "VDAC2", "VDAC3", "PTGS2", "CHAC1", "SLC1A5"],
+        "suppressor": ["GPX4", "SLC7A11", "SLC3A2", "FTH1", "FTL", "NFE2L2", "KEAP1", "NQO1", "TXNRD1", "GCLC", "GCLM", "HSPB1", "CISD1", "CISD2", "SLC40A1", "SIRT1", "ATF4", "NFE2L1", "FANCD2", "PRDX1"]
+      },
+      "core": ["ACSL4", "LPCAT3", "ALOX15", "NCOA4", "TFRC", "SLC11A2", "STEAP3", "TF", "CP", "HFE", "GLS2", "SAT1", "ATG5", "ATG7", "MAP1LC3A", "MAP1LC3B", "CS", "FDFT1", "MBOAT1", "HILPDA", "PEBP1", "IREB2", "ACO1", "VDAC2", "VDAC3", "PTGS2", "CHAC1", "SLC1A5", "GPX4", "SLC7A11", "SLC3A2", "FTH1", "FTL", "NFE2L2", "KEAP1", "NQO1", "TXNRD1", "GCLC", "GCLM", "HSPB1", "CISD1", "CISD2", "SLC40A1", "SIRT1", "ATF4", "NFE2L1", "FANCD2", "PRDX1"]
+    },
+    "pyroptosis": {
+      "label": "Pyroptosis",
+      "sub": {
+        "inflammasome": ["NLRP1", "NLRP3", "NLRC4", "AIM2", "PYCARD", "NEK7", "MEFV", "CARD8"],
+        "gasdermin_execution": ["GSDMA", "GSDMB", "GSDMC", "GSDMD", "GSDME", "GZMA", "GZMB", "ELANE"],
+        "caspase_cytokine": ["CASP1", "CASP3", "CASP4", "CASP5", "IL1B", "IL18", "NFKB1", "NFKB2", "IRF1", "TNF"]
+      },
+      "core": ["NLRP1", "NLRP3", "NLRC4", "AIM2", "PYCARD", "NEK7", "MEFV", "CARD8", "GSDMA", "GSDMB", "GSDMC", "GSDMD", "GSDME", "GZMA", "GZMB", "ELANE", "CASP1", "CASP3", "CASP4", "CASP5", "IL1B", "IL18", "NFKB1", "NFKB2", "IRF1", "TNF"]
+    },
+    "PANoptosis": {
+      "label": "PANoptosis",
+      "sub": {
+        "panoptosome_sensor": ["ZBP1", "AIM2", "NLRP3", "PYCARD", "TLR2", "TLR4", "TICAM1"],
+        "panoptosome_kinase": ["RIPK1", "RIPK3", "MLKL", "CASP1", "CASP6", "CASP8", "FADD", "TRADD", "TNFRSF1A"],
+        "regulator_execution": ["TNFAIP3", "CYLD", "SPATA2", "OTULIN", "TANK", "IRF3", "IRF7", "NFKB1", "GSDMD", "GSDME", "IL1B", "IL18", "TNF"]
+      },
+      "core": ["ZBP1", "AIM2", "NLRP3", "PYCARD", "TLR2", "TLR4", "TICAM1", "RIPK1", "RIPK3", "MLKL", "CASP1", "CASP6", "CASP8", "FADD", "TRADD", "TNFRSF1A", "TNFAIP3", "CYLD", "SPATA2", "OTULIN", "TANK", "IRF3", "IRF7", "NFKB1", "GSDMD", "GSDME", "IL1B", "IL18", "TNF"]
+    },
+    "cuproptosis_optional": {
+      "label": "Cuproptosis (optional extension)",
+      "sub": {},
+      "core": ["FDX1", "LIAS", "LIPT1", "LIPT2", "DLD", "DLAT", "PDHA1", "PDHB", "MTF1", "GLS", "CDKN2A", "SLC31A1", "ATP7A", "ATP7B"]
+    },
+    "m1A_m5C_optional": {
+      "label": "m1A/m5C regulators (optional extension)",
+      "sub": {
+        "m1A": ["TRMT6", "TRMT61A", "ALKBH3"],
+        "m5C": ["NSUN2", "NSUN5", "NSUN6", "TRDMT1", "ALYREF", "YBX1"]
+      },
+      "core": ["TRMT6", "TRMT61A", "ALKBH3", "NSUN2", "NSUN5", "NSUN6", "TRDMT1", "ALYREF", "YBX1"]
+    }
+  },
+  "notes": {
+    "overlap_warning": "PANoptosis 与 pyroptosis 模块存在预期重叠(NLRP3/PYCARD/GSDMD/GSDME/IL1B/IL18/TNF/NFKB1 等);打分与相关性解读时注意两模块并非独立。",
+    "symbol_alias": "VIRMA 曾用名 KIAA1429;SLC11A2 曾用名 DMT1;TRDMT1 曾用名 DNMT2;CBLL1 曾用名 HAKAI。脚本映射时对已失效 symbol 自动尝试别名。",
+    "usage": "核心分析建议只用 m6A/ferroptosis/pyroptosis/PANoptosis 四模块;cuproptosis/m1A_m5C 为可选中扩展。"
+  }
+}

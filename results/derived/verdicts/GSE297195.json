@@ -1,0 +1,110 @@
+{
+  "dataset": "GSE297195_hippocampus_counts.tsv",
+  "n_samples": 33,
+  "n_genes": 56884,
+  "batch_source": "实测",
+  "libsize_bimodal": true,
+  "libsize_threshold": 37323333.0,
+  "libsize_means": {
+    "low": 8038224.9,
+    "high": 80268870.47826087
+  },
+  "n_high_batch": 23,
+  "confounded_groups": [
+    "Aged_24h_sham",
+    "Aged_24h_surgery",
+    "Aged_5w_sham",
+    "Aged_5w_surgery",
+    "Young_24h_sham",
+    "Young_24h_surgery"
+  ],
+  "n_confounded_groups": 6,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.4714475937892425,
+    "R2_batch": 0.991335906628195,
+    "R2_group": 0.991335906628195
+  },
+  "gene_level_batch_dominant": 570,
+  "gene_level_group_dominant": 543,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.5151515151515151,
+    "random_baseline": 0.21212121212121213,
+    "batch_supported_by_technical": true
+  },
+  "strata": {
+    "24h": {
+      "n": 23,
+      "n_groups": 4,
+      "n_batches": 4,
+      "table": {
+        "Aged_24h_sham": {
+          "B1": 0,
+          "B2": 0,
+          "B3": 6,
+          "B4": 0
+        },
+        "Aged_24h_surgery": {
+          "B1": 0,
+          "B2": 0,
+          "B3": 0,
+          "B4": 7
+        },
+        "Young_24h_sham": {
+          "B1": 5,
+          "B2": 0,
+          "B3": 0,
+          "B4": 0
+        },
+        "Young_24h_surgery": {
+          "B1": 0,
+          "B2": 5,
+          "B3": 0,
+          "B4": 0
+        }
+      },
+      "n_confounded_groups": 4,
+      "loocv_accuracy": 0.30434782608695654,
+      "random_baseline": 0.30434782608695654,
+      "loocv_perm_p": 0.34,
+      "batch_technically_separable": false,
+      "usable_within": true
+    },
+    "5w": {
+      "n": 10,
+      "n_groups": 2,
+      "n_batches": 2,
+      "table": {
+        "Aged_5w_sham": {
+          "B5": 0,
+          "B6": 5
+        },
+        "Aged_5w_surgery": {
+          "B5": 5,
+          "B6": 0
+        }
+      },
+      "n_confounded_groups": 2,
+      "loocv_accuracy": 0.6,
+      "random_baseline": 0.5,
+      "loocv_perm_p": 0.61,
+      "batch_technically_separable": false,
+      "usable_within": true
+    }
+  },
+  "median_uniq_batch": 0.0,
+  "median_uniq_group": 0.0,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": true,
+  "recommendation": "不可用:见 FAIL 列表",
+  "FAIL": [
+    "B: 6 个分组 100% 属单一批次,不可分离"
+  ],
+  "WARN": [
+    "批次标签在技术指标上可区分(留一准确率 0.52 vs 基线 0.21)→ 批次真实存在,混杂判定成立",
+    "D: 文库大小双峰且与分组共变"
+  ],
+  "usable": false
+}

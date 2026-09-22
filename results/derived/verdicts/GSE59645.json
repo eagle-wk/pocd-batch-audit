@@ -1,0 +1,53 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 16,
+  "n_genes": 26583,
+  "batch_source": "实测",
+  "libsize_bimodal": false,
+  "libsize_threshold": 49573625.709199995,
+  "libsize_means": {
+    "low": 38884306.280022226,
+    "high": 57268977.63591429
+  },
+  "n_high_batch": 7,
+  "confounded_groups": [
+    "naive",
+    "sham",
+    "tbi",
+    "tbi_e33",
+    "tbi_jm6",
+    "tbi_pmi"
+  ],
+  "n_confounded_groups": 6,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.5833570391697076,
+    "R2_batch": 0.9612295827438243,
+    "R2_group": 0.9959803247849396
+  },
+  "gene_level_batch_dominant": 0,
+  "gene_level_group_dominant": 5000,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.9375,
+    "random_baseline": 0.5,
+    "loocv_perm_p": 0.005,
+    "batch_supported_by_technical": true,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.0,
+  "median_uniq_group": 0.1744214116384598,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": true,
+  "recommendation": "不可用:见 FAIL 列表",
+  "FAIL": [
+    "B: 6 个分组 100% 属单一批次,不可分离"
+  ],
+  "WARN": [
+    "批次标签在技术指标上可区分(留一准确率 0.94 vs 基线 0.50, 置换 p=0.005)且未被任何分层变量嵌套解释→ 批次真实存在,混杂判定成立"
+  ],
+  "usable": false
+}

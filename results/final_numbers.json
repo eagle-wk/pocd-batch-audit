@@ -1,0 +1,87 @@
+{
+  "provenance": {
+    "GSE59645": "measured (scan date + scanner)",
+    "GSE115614": "measured (scan date)",
+    "GSE304956": "measured (declared batch1/2)",
+    "GSE330865": "GSM-numbering block (B1-B6); submitter batch column = UNKNOWN",
+    "GSE297195": "GSM-numbering block (B1-B6); submitter batch column = UNKNOWN",
+    "GSE276942": "design-derived (timepoint == batch, declared by design)",
+    "GSE64978": "inferred (median split of library size; no bimodality)",
+    "GSE68207": "inferred (median split of library size; no bimodality)",
+    "GSE31357": "inferred (median split; proxy negative on CodeLink)",
+    "GSE283401": "inferred (median split of library size)",
+    "GSE80174_Cortex": "inferred (median split of library size; no bimodality)",
+    "GSE80174_Hippocampus": "inferred (median split of library size; no bimodality)",
+    "GSE80174_Thalamus": "inferred (median split of library size; no bimodality)",
+    "GSE163943": "no batch label"
+  },
+  "distortion_corrected": {
+    "caveat": 6,
+    "unusable": 6,
+    "usable": 2
+  },
+  "domain_fisher_corrected": {
+    "POCD": [
+      2,
+      6
+    ],
+    "TBI": [
+      4,
+      8
+    ],
+    "OR": 0.5,
+    "p": 0.6270396270396269
+  },
+  "Simulation benchmark": {
+    "k": 497,
+    "n": 500,
+    "ci": [
+      0.9825094361891064,
+      0.997957440702361
+    ]
+  },
+  "Tool comparison": {
+    "k": 496,
+    "n": 500,
+    "ci": [
+      0.9796126401630989,
+      0.9968847352024923
+    ]
+  },
+  "scenario_C": {
+    "combat_retention": 1.7420207615501362e-16,
+    "sva_retention": 0.9999999999995459,
+    "ruv_retention": 0.01851824692879698
+  },
+  "scenario_B": {
+    "combat_retention": 1.1264953182007158,
+    "sva_retention": 0.999999999998989,
+    "ruv_retention": 0.9995082220435967
+  },
+  "concordance": {
+    "k": 11,
+    "n": 21,
+    "p": 1.0
+  },
+  "ifn": {
+    "n_genes": "12",
+    "dz": [
+      -0.225313,
+      -0.611339
+    ],
+    "p": [
+      0.037,
+      0.0076
+    ],
+    "Z": 3.32769,
+    "stouffer_p1s": 0.000437854,
+    "fisher_two_sided_input": 0.002580416164725409,
+    "fisher_one_sided_input": 0.0007425605347680804,
+    "bh_two_sided": 0.0079
+  },
+  "mod_tan": {
+    "p_865": "0",
+    "p_195": "0.1542",
+    "bh": 4.86453e-09
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 32,
+  "n_genes": 33849,
+  "batch_source": "推断(文库大小双峰)",
+  "libsize_bimodal": false,
+  "libsize_threshold": -1795751.3820500001,
+  "libsize_means": {
+    "low": -2339213.969533333,
+    "high": -553140.4213448276
+  },
+  "n_high_batch": 29,
+  "confounded_groups": [
+    "24_hr_Control",
+    "24_hr_MT+TBI",
+    "24_hr_Saline+TBI",
+    "4_hr_CB+TBI",
+    "4_hr_Control",
+    "4_hr_MT+TBI",
+    "4_hr_Saline+TBI"
+  ],
+  "n_confounded_groups": 7,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.30461406985909145,
+    "R2_batch": 0.005549300125768486,
+    "R2_group": 0.4784646552457432
+  },
+  "gene_level_batch_dominant": 101,
+  "gene_level_group_dominant": 4899,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.71875,
+    "random_baseline": 0.90625,
+    "loocv_perm_p": 0.05,
+    "batch_supported_by_technical": false,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.018624108180534227,
+  "median_uniq_group": 0.3746770323372132,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": false,
+  "recommendation": "慎用:批次与分组不可分离,需人工核查建库记录",
+  "FAIL": [],
+  "WARN": [
+    "B*: 分组与\"批次\"标签看似 100% 混杂,但这些标签在技术指标上不可区分(留一准确率 0.72 vs 基线 0.91, 置换 p=0.050)→ 更可能是提交者的编号习惯而非真实建库批次,该混杂警报存疑",
+    "B?: 7 个分组与批次标签完全重叠,但批次标签技术不可区分,暂不计为红线(需人工确认建库记录)"
+  ],
+  "usable": true
+}

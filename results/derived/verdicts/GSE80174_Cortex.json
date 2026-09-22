@@ -1,0 +1,65 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 10,
+  "n_genes": 26404,
+  "batch_source": "推断(文库大小双峰)",
+  "libsize_bimodal": false,
+  "libsize_threshold": 27395749.0,
+  "libsize_means": {
+    "low": 26206727.0,
+    "high": 28603141.0
+  },
+  "n_high_batch": 6,
+  "confounded_groups": [],
+  "n_confounded_groups": 0,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.6021572367864191,
+    "R2_batch": 0.16062313410798623,
+    "R2_group": 0.683374231490931
+  },
+  "gene_level_batch_dominant": 1555,
+  "gene_level_group_dominant": 3445,
+  "within_group_batch_effects": [
+    {
+      "group": "control",
+      "n_low": 3,
+      "n_high": 2,
+      "within_batch_diff": -0.1827352565216951
+    },
+    {
+      "group": "injured",
+      "n_low": 3,
+      "n_high": 2,
+      "within_batch_diff": -0.31053653127819514
+    }
+  ],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.9,
+    "random_baseline": 0.6,
+    "loocv_perm_p": 0.015,
+    "batch_supported_by_technical": true,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.1251918386888397,
+  "median_uniq_group": 0.4751752626418155,
+  "cross_batch_replication": {
+    "control_vs_injured": {
+      "n_genes": 5000,
+      "pearson_r": 0.7682248681197228,
+      "sign_agreement": 0.8612,
+      "n_batches": 2
+    }
+  },
+  "batch_separable_from_group": true,
+  "batch_block_degenerate": false,
+  "recommendation": "可用:批次与分组可分离,把 batch 作为协变量纳入模型",
+  "FAIL": [],
+  "WARN": [
+    "批次标签在技术指标上可区分(留一准确率 0.90 vs 基线 0.60, 置换 p=0.015)且未被任何分层变量嵌套解释→ 批次真实存在,混杂判定成立",
+    "E: 跨批次复现性通过(1 组对比全部 r≥0.3 且方向一致率≥70%),但 n 小,不等于分组效应为真"
+  ],
+  "usable": true
+}

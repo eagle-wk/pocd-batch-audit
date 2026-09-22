@@ -1,0 +1,18 @@
+# Normalise line endings.
+#
+# The build scripts write LF, the checks compare byte-for-byte, and the Zenodo
+# archive is assembled from the working tree. Without this file a Windows clone
+# with core.autocrlf=true checks every text file out as CRLF, and the figures /
+# numbers no longer match the archived release. (CRLF contamination is not
+# hypothetical here: it is what broke the identity-replacement script in this
+# project's own bootstrap.)
+* text=auto eol=lf
+
+# Never touch these.
+*.png   binary
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary
+*.xlsx  binary
+*.pyc   binary

@@ -1,0 +1,18 @@
+# Runtime dependencies for the batch-confound audit pipeline.
+#
+# Deliberately minimal: the audit, the benchmarks and every figure are built on
+# numpy / scipy / matplotlib alone. No R, no Bioconductor, no WGCNA package --
+# the module construction and the ComBat / sva / RUV comparators are implemented
+# in `analysis/` and `benchmark/` so that the whole pipeline runs from one
+# language.
+#
+# Lower bounds are the oldest versions the code is known to work with; the
+# versions in the trailing comments are what the manuscript's figures and
+# numbers were produced with (Python 3.13.14).
+numpy>=2.0          # tested with 2.5.2
+scipy>=1.13         # tested with 1.18.1
+matplotlib>=3.8     # tested with 3.11.1
+Pillow>=10.0        # tested with 12.3.0  (figure size / dpi checks)
+
+# Optional, only needed to re-run the literature checks in docs/:
+# requests>=2.31

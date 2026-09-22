@@ -1,0 +1,39 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Jupyter / editors ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Raw data is NOT shipped ---
+# The GEO series matrices and RAW archives (~527 MB) are downloaded on demand
+# from the accessions listed in docs/DATA_SOURCES.md. Only the small derived
+# intermediates in results/ are versioned.
+raw/
+downloads/
+*.tar
+*.tar.gz
+*.cel
+*.CEL
+*.gz
+
+# --- Local scratch ---
+scratch/
+tmp/
+*.log
+
+# --- Figures ---
+# Keep every published figure at figures/output/*.png|pdf.
+# Only ignore matplotlib scratch written beside them.
+figures/output/_*

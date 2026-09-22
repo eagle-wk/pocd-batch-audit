@@ -1,0 +1,51 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 14,
+  "n_genes": 26787,
+  "batch_source": "实测",
+  "libsize_bimodal": false,
+  "libsize_threshold": 28051013.770899996,
+  "libsize_means": {
+    "low": 26657209.320199996,
+    "high": 38430475.90423333
+  },
+  "n_high_batch": 12,
+  "confounded_groups": [
+    "Sham",
+    "TBI",
+    "TBI+Imipramine",
+    "TBI+Prozac",
+    "TBI+Zoloft"
+  ],
+  "n_confounded_groups": 5,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.32549663077129587,
+    "R2_batch": 0.8200205687850002,
+    "R2_group": 0.9356142269009855
+  },
+  "gene_level_batch_dominant": 0,
+  "gene_level_group_dominant": 5000,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.8571428571428571,
+    "random_baseline": 0.8571428571428571,
+    "loocv_perm_p": 0.03,
+    "batch_supported_by_technical": false,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.0,
+  "median_uniq_group": 0.25006357011842867,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": true,
+  "recommendation": "可用,但批次身份待确认:分组与批次标签完全重叠属编号构造,且这些标签在技术指标上不可区分 → 无证据表明存在真实批次效应。建议先用 lib.size + detected genes 作协变量的敏感性分析,并向作者/补充材料核实建库批次记录",
+  "FAIL": [],
+  "WARN": [
+    "B*: 分组与\"批次\"标签看似 100% 混杂,但这些标签在技术指标上不可区分(留一准确率 0.86 vs 基线 0.86, 置换 p=0.030)→ 更可能是提交者的编号习惯而非真实建库批次,该混杂警报存疑",
+    "B?: 5 个分组与批次标签完全重叠,但批次标签技术不可区分,暂不计为红线(需人工确认建库记录)"
+  ],
+  "usable": true
+}

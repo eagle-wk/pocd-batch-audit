@@ -1,0 +1,4 @@
+contrast	n_genes	pearson_r	sign_agreement	n_batches
+burn_vs_excision	5000	-0.2861	0.3146	2
+burn_vs_sham	5000	-0.2855	0.3958	2
+excision_vs_sham	5000	-0.2127	0.4440	2

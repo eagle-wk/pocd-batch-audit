@@ -1,0 +1,90 @@
+{
+  "tag": "GSE297195_24h_GSE330865modules",
+  "strata": [
+    "Aged",
+    "Young"
+  ],
+  "genome_median_dz_raw": -0.19292628525677522,
+  "genome_frac_negative_raw": 0.5834214290156085,
+  "genome_median_dz_qn": 0.04626243635640176,
+  "genome_frac_negative_qn": 0.47957216591008023,
+  "results": [
+    {
+      "set": "mod_brown",
+      "n_genes": 438,
+      "mean_dz": -0.24681787468938332,
+      "emp_p": 0.0136,
+      "mean_expr": 3.1544989080802064,
+      "median_expr_rank_pct": 36.89614704553632,
+      "qn_mean_dz": -0.007705648666676159,
+      "qn_emp_p": 0.889,
+      "verdict": "[全局位移]"
+    },
+    {
+      "set": "mod_turquoise",
+      "n_genes": 834,
+      "mean_dz": -0.2024226531900711,
+      "emp_p": 0.071,
+      "mean_expr": 3.0177724898342198,
+      "median_expr_rank_pct": 35.7266950571127,
+      "qn_mean_dz": 0.017946084929146077,
+      "qn_emp_p": 0.751,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_tan",
+      "n_genes": 134,
+      "mean_dz": -0.23341647142547597,
+      "emp_p": 0.1448,
+      "mean_expr": 3.8064713497728744,
+      "median_expr_rank_pct": 46.064188107407745,
+      "qn_mean_dz": -0.11140066037928054,
+      "qn_emp_p": 0.1542,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_darkturquoise",
+      "n_genes": 26,
+      "mean_dz": -0.21040567041946512,
+      "emp_p": 0.383,
+      "mean_expr": 2.699016889632107,
+      "median_expr_rank_pct": 30.91656182881853,
+      "qn_mean_dz": 0.04334950980230444,
+      "qn_emp_p": 0.783,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_greenyellow",
+      "n_genes": 81,
+      "mean_dz": -0.10509368534987466,
+      "emp_p": 0.7406,
+      "mean_expr": 2.3408452495974235,
+      "median_expr_rank_pct": 26.20883014307967,
+      "qn_mean_dz": -0.005489543706396465,
+      "qn_emp_p": 0.952,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_purple",
+      "n_genes": 194,
+      "mean_dz": -0.04816036749623379,
+      "emp_p": 0.9722,
+      "mean_expr": 5.424021559838637,
+      "median_expr_rank_pct": 65.42077254517561,
+      "qn_mean_dz": 0.0030744739095190142,
+      "qn_emp_p": 0.9626,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_royalblue",
+      "n_genes": 121,
+      "mean_dz": 0.024310688632258964,
+      "emp_p": 0.9756,
+      "mean_expr": 3.9046519223859146,
+      "median_expr_rank_pct": 46.627121684077665,
+      "qn_mean_dz": 0.16565260062117387,
+      "qn_emp_p": 0.0414,
+      "verdict": "[QN后显现]"
+    }
+  ]
+}

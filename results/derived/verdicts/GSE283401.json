@@ -1,0 +1,147 @@
+{
+  "dataset": "GSE283401_microglia_counts.tsv",
+  "n_samples": 96,
+  "n_genes": 54532,
+  "batch_source": "推断(文库大小双峰)",
+  "libsize_bimodal": false,
+  "libsize_threshold": 3489532.5,
+  "libsize_means": {
+    "low": 2679188.0967741935,
+    "high": 3637310.0
+  },
+  "n_high_batch": 3,
+  "confounded_groups": [
+    "old_control_48 hours_hemisphere",
+    "old_control_48 hours_hippocampus",
+    "old_control_6 hours_hemisphere",
+    "old_control_6 hours_hippocampus",
+    "old_surgery_48 hours_hemisphere",
+    "old_surgery_48 hours_hippocampus",
+    "old_surgery_6 hours_hemisphere",
+    "young_control_48 hours_hemisphere",
+    "young_control_48 hours_hippocampus",
+    "young_control_6 hours_hemisphere",
+    "young_surgery_48 hours_hemisphere",
+    "young_surgery_6 hours_hemisphere",
+    "young_surgery_6 hours_hippocampus"
+  ],
+  "n_confounded_groups": 13,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.17930586359126463,
+    "R2_batch": 0.049951083715533695,
+    "R2_group": 0.3279675526849526
+  },
+  "gene_level_batch_dominant": 16,
+  "gene_level_group_dominant": 4984,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.9166666666666666,
+    "random_baseline": 0.96875,
+    "batch_supported_by_technical": false
+  },
+  "strata": {
+    "old": {
+      "n": 64,
+      "n_groups": 8,
+      "n_batches": 2,
+      "table": {
+        "old_control_48 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 8
+        },
+        "old_control_48 hours_hippocampus": {
+          "HIGH": 0,
+          "LOW": 8
+        },
+        "old_control_6 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 8
+        },
+        "old_control_6 hours_hippocampus": {
+          "HIGH": 0,
+          "LOW": 8
+        },
+        "old_surgery_48 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 9
+        },
+        "old_surgery_48 hours_hippocampus": {
+          "HIGH": 0,
+          "LOW": 9
+        },
+        "old_surgery_6 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 7
+        },
+        "old_surgery_6 hours_hippocampus": {
+          "HIGH": 1,
+          "LOW": 6
+        }
+      },
+      "n_confounded_groups": 7,
+      "loocv_accuracy": 0.90625,
+      "random_baseline": 0.984375,
+      "loocv_perm_p": 0.025,
+      "batch_technically_separable": false,
+      "usable_within": true
+    },
+    "young": {
+      "n": 32,
+      "n_groups": 8,
+      "n_batches": 2,
+      "table": {
+        "young_control_48 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 4
+        },
+        "young_control_48 hours_hippocampus": {
+          "HIGH": 0,
+          "LOW": 4
+        },
+        "young_control_6 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 4
+        },
+        "young_control_6 hours_hippocampus": {
+          "HIGH": 1,
+          "LOW": 3
+        },
+        "young_surgery_48 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 4
+        },
+        "young_surgery_48 hours_hippocampus": {
+          "HIGH": 1,
+          "LOW": 3
+        },
+        "young_surgery_6 hours_hemisphere": {
+          "HIGH": 0,
+          "LOW": 4
+        },
+        "young_surgery_6 hours_hippocampus": {
+          "HIGH": 0,
+          "LOW": 4
+        }
+      },
+      "n_confounded_groups": 6,
+      "loocv_accuracy": 0.96875,
+      "random_baseline": 0.9375,
+      "loocv_perm_p": 0.0,
+      "batch_technically_separable": false,
+      "usable_within": true
+    }
+  },
+  "median_uniq_batch": 0.0064268625378191,
+  "median_uniq_group": 0.18436425994180855,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": false,
+  "recommendation": "慎用:批次与分组不可分离,需人工核查建库记录",
+  "FAIL": [],
+  "WARN": [
+    "B*: 分组与\"批次\"标签看似 100% 混杂,但这些标签在技术指标上不可区分(留一准确率 0.92 vs 基线 0.97)→ 更可能是提交者的编号习惯而非真实建库批次,该混杂警报存疑",
+    "B?: 13 个分组与批次标签完全重叠,但批次标签技术不可区分,暂不计为红线(需人工确认建库记录)"
+  ],
+  "usable": true
+}

@@ -1,0 +1,91 @@
+{
+  "tag": "GSE330865_modules",
+  "strata": [
+    "17m",
+    "27m",
+    "3m"
+  ],
+  "genome_median_dz_raw": -0.0865705744833038,
+  "genome_frac_negative_raw": 0.5822861652400898,
+  "genome_median_dz_qn": -0.005057656213466655,
+  "genome_frac_negative_qn": 0.504461846658168,
+  "results": [
+    {
+      "set": "mod_tan",
+      "n_genes": 135,
+      "mean_dz": -0.3042910384248995,
+      "emp_p": 0.0,
+      "mean_expr": 4.159461925925926,
+      "median_expr_rank_pct": 49.452549739079224,
+      "qn_mean_dz": -0.2460399707114575,
+      "qn_emp_p": 0.0,
+      "verdict": "[稳健-特异]"
+    },
+    {
+      "set": "mod_greenyellow",
+      "n_genes": 108,
+      "mean_dz": -0.15987435934299035,
+      "emp_p": 0.0086,
+      "mean_expr": 1.9691528395061728,
+      "median_expr_rank_pct": 20.42045232265593,
+      "qn_mean_dz": -0.11698879620200534,
+      "qn_emp_p": 0.001,
+      "verdict": "[稳健-特异]"
+    },
+    {
+      "set": "mod_darkturquoise",
+      "n_genes": 34,
+      "mean_dz": -0.20896348699060682,
+      "emp_p": 0.0166,
+      "mean_expr": 2.411367549019608,
+      "median_expr_rank_pct": 26.12778128916837,
+      "qn_mean_dz": -0.13986822702182927,
+      "qn_emp_p": 0.0298,
+      "verdict": "[稳健-特异]"
+    },
+    {
+      "set": "mod_purple",
+      "n_genes": 194,
+      "mean_dz": -0.09898124205036349,
+      "emp_p": 0.188,
+      "mean_expr": 5.177426821305842,
+      "median_expr_rank_pct": 62.65535418469837,
+      "qn_mean_dz": -0.049270124208822215,
+      "qn_emp_p": 0.0672,
+      "verdict": "[无信号]"
+    },
+    {
+      "set": "mod_royalblue",
+      "n_genes": 121,
+      "mean_dz": 0.09464719804744856,
+      "emp_p": 0.2626,
+      "mean_expr": 3.7941938292011015,
+      "median_expr_rank_pct": 44.6024122618881,
+      "qn_mean_dz": 0.15657161764055674,
+      "qn_emp_p": 0.0,
+      "verdict": "[QN后显现]"
+    },
+    {
+      "set": "mod_brown",
+      "n_genes": 456,
+      "mean_dz": 0.05977762353139722,
+      "emp_p": 0.81,
+      "mean_expr": 3.2498314108187136,
+      "median_expr_rank_pct": 37.00379994483264,
+      "qn_mean_dz": 0.12349939903100553,
+      "qn_emp_p": 0.0,
+      "verdict": "[QN后显现]"
+    },
+    {
+      "set": "mod_turquoise",
+      "n_genes": 865,
+      "mean_dz": 0.04780982891270836,
+      "emp_p": 0.9832,
+      "mean_expr": 3.415279942196532,
+      "median_expr_rank_pct": 39.668892414246606,
+      "qn_mean_dz": 0.1060366254767487,
+      "qn_emp_p": 0.0,
+      "verdict": "[QN后显现]"
+    }
+  ]
+}

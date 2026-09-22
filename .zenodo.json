@@ -1,0 +1,63 @@
+{
+  "title": "Batch-confound audit for public transcriptomic datasets",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "version": "1.0.0",
+  "publication_date": "2026-09-22",
+  "description": "<p>Reference implementation of a four-stage <strong>design-admissibility audit</strong> for public transcriptomic datasets, together with the derived results and figures for a methodological audit of <strong>14 contrast-units across 12 GEO series</strong> in two disease domains (perioperative neurocognitive disorder and traumatic brain injury).</p><p>Public datasets are usually taken at face value: if the treatment arm is also the batch that ran on a different day, every downstream result is confounded and no downstream statistic reveals it. The audit applies four defences in order &mdash; (0) are the group labels independently verifiable; (1) is the batch real and is it entangled with the group, tested by a three-gate criterion combining structural entanglement, technical separability and nesting; (2) does the signal survive batch correction without moving globally; (3) is a module's identity asserted or tested against an external gene set &mdash; and returns one of four verdicts (<code>stop</code> / <code>correct</code> / <code>proceed</code> / <code>normalize</code>) per <em>contrast-unit</em> rather than per series.</p><p><strong>Result:</strong> of the 14 contrast-units, 2 are unconditionally analysable, 6 only under documented restrictions, and 6 are categorically unusable. The original biological hypothesis (an m6A &times; programmed-cell-death signature) did not replicate across datasets (direction agreement 11/21 = 52.4%, p = 1.000). The audit is validated on a seeded simulation benchmark (99.4% correct verdicts, 497/500) and compared head-to-head against ComBat, sva and RUV, which in a collinear design retain 0.0%, 100% and 1.9% of the true signal respectively without warning.</p><p>All analyses use public GEO data (accessions tabulated in the repository); no new sequencing was performed. Raw GEO downloads are not shipped &mdash; only the small derived intermediates needed to regenerate every figure and number offline. The version-controlled source is at <a href=\"https://github.com/eagle-wk/pocd-batch-audit\">github.com/eagle-wk/pocd-batch-audit</a>.</p>",
+  "creators": [
+    {
+      "name": "Wang, Kun",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    },
+    {
+      "name": "Liu, Bo",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    },
+    {
+      "name": "Wang, Chunjie",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    },
+    {
+      "name": "Hu, Jiayan",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    },
+    {
+      "name": "Chen, Hao",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    },
+    {
+      "name": "Song, Keqin",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Song, Keqin",
+      "affiliation": "Zhoushan Hospital, Zhejiang, China",
+      "type": "ContactPerson"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/eagle-wk/pocd-batch-audit",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "keywords": [
+    "batch effect",
+    "confounding",
+    "GEO",
+    "reproducibility",
+    "transcriptomics",
+    "methodological audit",
+    "design admissibility",
+    "postoperative cognitive dysfunction",
+    "neurotrauma"
+  ],
+  "notes": "Accompanies the manuscript \"A diagnostic audit for batch and confounding artifacts in reuse of public bulk transcriptomic data: a two-domain study in perioperative neurocognitive disorder and traumatic brain injury\" (under review; this record is the code and results archival release, not the article). Creators and affiliation follow the manuscript's author list. The version-controlled source of this release is https://github.com/eagle-wk/pocd-batch-audit ; this record is the citable, frozen snapshot of it. On the GitHub-integration route Zenodo reads its metadata from this file at release time; on the manual route the web form is authoritative and this file is shipped for reference only. The archive DOI is 10.5281/zenodo.22899702."
+}

@@ -1,0 +1,75 @@
+{
+  "reps": 100,
+  "perm": 200,
+  "n_per_group": 15,
+  "p_genes": 1500,
+  "overall_correct_rate": 0.994,
+  "rows": [
+    {
+      "scenario": "A_no_batch",
+      "truth": "proceed",
+      "truth_cn": "直接分析",
+      "correct_rate": 1.0,
+      "mean_acc": NaN,
+      "mean_perm_p": NaN,
+      "combat_signal_retention": 0.9999999999989988,
+      "combat_noise_inflation": 0.9999999999965635,
+      "verdict_dist": {
+        "proceed": 100
+      }
+    },
+    {
+      "scenario": "B_batch_crossed",
+      "truth": "correct",
+      "truth_cn": "校正后分析",
+      "correct_rate": 1.0,
+      "mean_acc": 0.9636666666666668,
+      "mean_perm_p": 0.0057213930348258705,
+      "combat_signal_retention": 0.9631291819058747,
+      "combat_noise_inflation": 0.947005448723402,
+      "verdict_dist": {
+        "correct": 100
+      }
+    },
+    {
+      "scenario": "C_batch_confound",
+      "truth": "stop",
+      "truth_cn": "不可用",
+      "correct_rate": 1.0,
+      "mean_acc": 0.9606666666666668,
+      "mean_perm_p": 0.007810945273631837,
+      "combat_signal_retention": 1.2176064268969165e-16,
+      "combat_noise_inflation": 1.527100017385267e-16,
+      "verdict_dist": {
+        "stop": 100
+      }
+    },
+    {
+      "scenario": "D_pseudo_batch",
+      "truth": "proceed",
+      "truth_cn": "直接分析",
+      "correct_rate": 0.97,
+      "mean_acc": 0.5176666666666666,
+      "mean_perm_p": 0.47960199004975124,
+      "combat_signal_retention": 0.9714293165942266,
+      "combat_noise_inflation": 0.9856388612923922,
+      "verdict_dist": {
+        "proceed": 97,
+        "correct": 3
+      }
+    },
+    {
+      "scenario": "E_global_shift",
+      "truth": "normalize",
+      "truth_cn": "归一化后分析",
+      "correct_rate": 1.0,
+      "mean_acc": NaN,
+      "mean_perm_p": NaN,
+      "combat_signal_retention": 0.999999999998487,
+      "combat_noise_inflation": 0.9999999999976019,
+      "verdict_dist": {
+        "normalize": 100
+      }
+    }
+  ]
+}

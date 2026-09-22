@@ -1,0 +1,49 @@
+{
+  "dataset": "expression_matrix.tsv",
+  "n_samples": 9,
+  "n_genes": 26404,
+  "batch_source": "推断(文库大小双峰)",
+  "libsize_bimodal": false,
+  "libsize_threshold": 26307636.5,
+  "libsize_means": {
+    "low": 24828635.333333332,
+    "high": 28840438.0
+  },
+  "n_high_batch": 6,
+  "confounded_groups": [
+    "injured"
+  ],
+  "n_confounded_groups": 1,
+  "lead_PC": {
+    "PC": 1,
+    "var_explained": 0.8577731215191294,
+    "R2_batch": 0.6694424217728403,
+    "R2_group": 0.4684066416388716
+  },
+  "gene_level_batch_dominant": 4820,
+  "gene_level_group_dominant": 180,
+  "within_group_batch_effects": [],
+  "batch_plausibility": {
+    "loocv_accuracy_on_technical": 0.8888888888888888,
+    "random_baseline": 0.6666666666666666,
+    "loocv_perm_p": 0.005,
+    "batch_supported_by_technical": true,
+    "nested_within": {},
+    "nested_within_tests": {},
+    "explained_by_nesting": []
+  },
+  "median_uniq_batch": 0.18061086312210112,
+  "median_uniq_group": 0.0055167231462860955,
+  "cross_batch_replication": {},
+  "batch_separable_from_group": false,
+  "batch_block_degenerate": false,
+  "recommendation": "不可用:见 FAIL 列表",
+  "FAIL": [
+    "B: 1 个分组 100% 属单一批次,不可分离",
+    "C: 4820/5000 个高变基因由批次主导,且批次独有方差中位数(0.181)为分组(0.006)的 2 倍以上"
+  ],
+  "WARN": [
+    "批次标签在技术指标上可区分(留一准确率 0.89 vs 基线 0.67, 置换 p=0.005)且未被任何分层变量嵌套解释→ 批次真实存在,混杂判定成立"
+  ],
+  "usable": false
+}
